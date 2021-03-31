@@ -1,0 +1,143 @@
+h1 {
+  font-size: 3em !important;
+}
+
+h2 {
+  font-size: 2.2em !important;
+}
+
+body {
+  background: #f70000;
+  background: linear-gradient(94deg, rgba(247, 0, 0, 0.7) 0%, rgba(58, 93, 168, 0.7) 82%);
+}
+
+.text-input {
+  width: 90% !important;
+  margin: 5%;
+}
+
+.pokemon-board {
+  background: transparent;
+  padding: 60px;
+  margin: 80px auto 80px auto;
+}
+
+.pokemon-card {
+  display: inline-block;
+  position: relative;
+  padding: 20px 60px 20px 60px;
+  width: 100%;
+  height: 40vh;
+  margin-bottom: 40px;
+  border: 2px solid black;
+  text-align: center;
+  background: white;
+}
+.pokemon-card > .img-container {
+  position: relative;
+  margin: auto;
+  width: 160px;
+  height: 160px;
+}
+.pokemon-card > .img-container > img {
+  left: 0px;
+  position: absolute;
+  display: block;
+  margin: auto;
+  width: 160px;
+  height: 160px;
+}
+@keyframes poke-bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.35) skewY(2deg) skewX(-2deg);
+  }
+}
+.pokemon-card:hover {
+  border: 2px solid #FFCB05;
+  color: #FFCB05;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px #FFCB05;
+}
+.pokemon-card:hover img {
+  animation: poke-bounce;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@media (min-width: 576px) {
+  .text-input {
+    width: 500px !important;
+    margin: 9% auto 0% auto;
+    border-radius: 6px !important;
+  }
+
+  .pokemon-card {
+    height: 440px;
+  }
+  .pokemon-card > .img-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  .pokemon-card > .img-container > img {
+    left: 6px;
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .text-input {
+    margin: 4% auto 0% auto;
+    border-radius: 6px !important;
+  }
+
+  .pokemon-card {
+    height: 300px;
+  }
+  .pokemon-card > .img-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+  }
+  .pokemon-card > .img-container > img {
+    left: 6px;
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 180px;
+  }
+}
+@media (min-width: 992px) {
+  .pokemon-card {
+    padding-top: 50px;
+    height: 340px;
+  }
+  .pokemon-card > .img-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+  }
+  .pokemon-card > .img-container > img {
+    left: 4px;
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 170px;
+  }
+  .pokemon-card > h2 {
+    position: relative;
+    top: 30px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

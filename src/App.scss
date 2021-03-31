@@ -1,0 +1,160 @@
+$main-yellow: #FFCB05;
+$main-blue: #3A5DA8;
+$main-red: #F70000;
+
+h1 {
+    font-size: 3em !important;
+}
+
+h2 {
+    font-size: 2.2em !important;
+}
+
+body {
+    background: rgb(247,0,0);
+    background: linear-gradient(94deg, rgba(247,0,0,0.7) 0%, rgba(58,93,168,0.7) 82%);
+}
+
+.text-input {
+    width: 90% !important;
+    margin: 5%;
+}
+
+.pokemon-board {
+    background: transparent;
+    padding: 60px;
+    margin: 80px auto 80px auto;
+}
+
+.pokemon-card {
+    display: inline-block;
+    position: relative;
+    padding: 20px 60px 20px 60px;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 40px;
+    border: 2px solid black;
+    text-align: center;
+    background: white;
+    $img-width: 160px;
+    $img-height: 160px;
+    > .img-container {
+        position: relative;
+        margin: auto;
+        width: $img-width;
+        height: $img-height;
+        > img {
+            left: 0px;
+            position: absolute;
+            display: block;
+            margin: auto;
+            width: $img-width;
+            height: $img-height;
+        }
+    }
+    @keyframes poke-bounce {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.35) skewY(2deg) skewX(-2deg);
+        }
+    }
+    &:hover {
+        img {
+            animation: poke-bounce;
+            animation-duration: 0.75s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        border: 2px solid $main-yellow;
+        color: $main-yellow;
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px $main-yellow;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .text-input {
+        width: 500px !important;
+        margin: 9% auto 0% auto;
+        border-radius: 6px !important;
+    }
+    .pokemon-card {
+        height: 440px;
+        > .img-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            > img {
+                left: 6px;
+                position: absolute;
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .text-input {
+        margin: 4% auto 0% auto;
+        border-radius: 6px !important;
+    }
+    .pokemon-card {
+        height: 300px;
+        > .img-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            > img {
+                left: 6px;
+                position: absolute;
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: 180px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .pokemon-card {
+        padding-top: 50px;
+        height: 340px;
+        > .img-container {
+            position: relative;
+            width: 100%;
+            height: 160px;
+            > img {
+                left: 4px;
+                position: absolute;
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: 170px;
+            }
+        }
+        > h2 {
+            position: relative;
+            top: 30px;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+}
